@@ -27,7 +27,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
-public class Piano extends JPanel implements KeyListener{
+class Main extends JPanel implements KeyListener{
 
 	/**
 	 * @param args
@@ -37,7 +37,7 @@ public class Piano extends JPanel implements KeyListener{
 	public boolean pri=false;
 	MidiChannel[] chan;
 	JLabel tf;
-	public Piano(int n)
+	public Main(int n)
 	{
 		super(new BorderLayout());
 		List<Integer> i=new ArrayList<Integer>(n);
@@ -200,12 +200,12 @@ public class Piano extends JPanel implements KeyListener{
 	}
 
 }
-class M{
+public class Piano{
 	public static void main(String srgs[])
 	{
 		JFrame jf=new JFrame("the Piano");
 		
-		Main v=new Piano(6);
+		Main v=new Main(6);
 		jf.setSize(800,500);
 		jf.add(v);
 		jf.setVisible(true);
